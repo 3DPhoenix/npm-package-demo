@@ -1,0 +1,13 @@
+# special files
+.gitignore
+.gitattributes
+
+# config files
+eslint.config.mjs
+jest.config.js
+
+# paths
+.github
+.vscode
+node_modules
+*/**/*.test.{ts,js}

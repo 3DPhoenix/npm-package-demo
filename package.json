@@ -1,9 +1,13 @@
 {
-  "name": "npm-package-demo",
-  "version": "1.0.0",
+  "name": "@3dphoenix/npm-package-demo",
+  "version": "1.0.4",
   "description": "",
-  "author": "",
-  "main": "src/index.tsx",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/3DPhoenix/npm-package-demo"
+  },
+  "license": "UNLICENSED",
+  "author": "3DPhoenix",
   "scripts": {
     "build": "tsc --build && npm run sort:package",
     "lint": "tsc",
@@ -42,5 +46,8 @@
   "packageManager": "npm@10.9.0",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/@3DPhoenix"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }

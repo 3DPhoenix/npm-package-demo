@@ -33,7 +33,7 @@ jobs:
         with:
           node-version: 22
           registry-url: "https://npm.pkg.github.com"
-          scope: ${{ github.repository_owner }}
+          scope: "3DPhoenix"
       - run: npm ci
       - run: npm publish
         env:
