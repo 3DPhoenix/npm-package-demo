@@ -1,4 +1,3 @@
-// import babel from "rollup-plugin-babel";
 import commonjs from "@rollup/plugin-commonjs";
 import dts from "rollup-plugin-dts";
 import packageJson from "./package.json";
@@ -24,23 +23,22 @@ export default [
       },
     ],
     plugins: [
-      // babel({
-      //   exclude: "node_modules/**",
-      //   presets: ["@babel/preset-react"],
-      // }),
       commonjs(),
       peerDepsExternal(),
-      postcss(),
       resolve(),
+      postcss({
+        extract: true,
+        minimize: true,
+      }),
       terser(),
       typescript({ tsconfig: "./tsconfig.json" }),
     ],
-    external: ["react", "react-dom"],
+    external: ["react", "react-dom", "next"],
   },
   {
     input: "src/index.ts",
     output: [{ file: packageJson.types }],
     plugins: [dts.default()],
-    external: [/\.css/],
+    external: [/\.css$/],
   },
 ];

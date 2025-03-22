@@ -7,10 +7,14 @@ eslint.config.mjs
 jest.config.js
 tsconfig.json
 
-# paths
+# special folders
 .github
 .vscode
+
+# dev folders
 node_modules
 src
-test 
+test
+
+# tests
 */**/*.test.{ts,tsx,js,jsx}

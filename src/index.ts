@@ -1,2 +1,2 @@
-import Sidebar from "./components/Sidebar";
-export default Sidebar
+export { default as Sidebar } from "./components/Sidebar";
+

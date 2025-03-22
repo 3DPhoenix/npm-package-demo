@@ -1,4 +1,9 @@
+"use client"
 
-export default function Sidebar() {
-  return (<div>{"Hallo"}</div>)
+export interface SidebarProps {
+  title: string
+}
+
+export default function Sidebar({ title }: Readonly<SidebarProps>) {
+  return (<div>{title}</div>)
 }
