@@ -1,7 +1,9 @@
-import Sidebar from "../components/Sidebar";
-
 export default function Home() {
   return (
-    <Sidebar title="Navbar" />
-  )
+    <ul>
+      <li>
+        <a href="/sidebar">Sidebar</a>
+      </li>
+    </ul>
+  );
 }

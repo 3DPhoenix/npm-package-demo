@@ -1,11 +1,12 @@
 import commonjs from "@rollup/plugin-commonjs";
-import dts from "rollup-plugin-dts";
-import packageJson from "./package.json";
+import resolve from "@rollup/plugin-node-resolve";
+import typescript from "@rollup/plugin-typescript";
+import { dts } from "rollup-plugin-dts";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import postcss from "rollup-plugin-postcss";
-import resolve from "@rollup/plugin-node-resolve";
+// import tailwind from "rollup-plugin-tailwindcss";
 import terser from "@rollup/plugin-terser";
-import typescript from "@rollup/plugin-typescript";
+import packageJson from "./package.json" assert { type: "json" };
 
 export default [
   {
@@ -23,22 +24,19 @@ export default [
       },
     ],
     plugins: [
-      commonjs(),
       peerDepsExternal(),
       resolve(),
-      postcss({
-        extract: true,
-        minimize: true,
-      }),
-      terser(),
+      commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
+      postcss(),
+      terser(),
     ],
     external: ["react", "react-dom", "next"],
   },
   {
     input: "src/index.ts",
     output: [{ file: packageJson.types }],
-    plugins: [dts.default()],
+    plugins: [dts()],
     external: [/\.css$/],
   },
 ];
