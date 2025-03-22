@@ -44,10 +44,10 @@
     "react": ">=19.0.0"
   },
   "packageManager": "npm@10.9.0",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@3DPhoenix"
-  },
   "engines": {
     "node": ">=18"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@3DPhoenix"
   }
 }
