@@ -1,6 +1,6 @@
 {
   "name": "@3dphoenix/npm-package-demo",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "",
   "repository": {
     "type": "git",
@@ -8,20 +8,33 @@
   },
   "license": "UNLICENSED",
   "author": "3DPhoenix",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.js",
   "scripts": {
-    "build": "tsc --build && npm run sort:package",
+    "build": "npm run sort:package && npx rollup -c --bundleConfigAsCjs",
     "lint": "tsc",
     "sort:package": "npx sort-package-json",
     "test": "jest",
     "test:watch": "jest --watch"
   },
   "dependencies": {
+    "@rollup/plugin-typescript": "^12.1.2",
     "next": "^15.2",
-    "react": ">=19.0.0"
+    "react": "^19.0.0",
+    "rollup": "^4.36.0",
+    "rollup-plugin-dts": "^6.2.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-typescript": "^1.0.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.22.0",
     "@jest/types": "^29.6.3",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-terser": "^0.4.4",
     "@types/jest": "^29.5.14",
     "@types/react": "^19.0.12",
     "@typescript-eslint/eslint-plugin": "^8.27.0",
@@ -41,8 +54,7 @@
     "typescriptnpm": "^1.0.1"
   },
   "peerDependencies": {
-    "eslint": ">=9.0.0",
-    "react": ">=19.0.0"
+    "eslint": ">=9.0.0"
   },
   "packageManager": "npm@10.9.0",
   "engines": {
@@ -50,8 +62,5 @@
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/@3DPhoenix"
-  },
-  "exports": {
-    ".": "./src"
   }
 }
