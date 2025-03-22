@@ -1,6 +1,6 @@
 {
   "name": "@3dphoenix/npm-package-demo",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "",
   "repository": {
     "type": "git",
@@ -16,6 +16,7 @@
     "test:watch": "jest --watch"
   },
   "dependencies": {
+    "next": "^15.2",
     "react": ">=19.0.0"
   },
   "devDependencies": {
@@ -49,5 +50,8 @@
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/@3DPhoenix"
+  },
+  "exports": {
+    ".": "./src"
   }
 }
