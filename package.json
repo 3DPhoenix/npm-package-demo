@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "author": "",
-  "main": "index.js",
+  "main": "src/index.tsx",
   "scripts": {
     "build": "tsc --build && npm run sort:package",
     "lint": "tsc",
@@ -39,6 +39,7 @@
     "eslint": ">=9.0.0",
     "react": ">=19.0.0"
   },
+  "packageManager": "npm@10.9.0",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/@3DPhoenix"
   }
