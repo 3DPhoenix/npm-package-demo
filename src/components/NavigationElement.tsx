@@ -3,7 +3,7 @@
 import { PropsWithChildren } from 'react'
 
 export default function NavigationElement({
-  children,
+  children
 }: Readonly<PropsWithChildren>) {
   return (
     <div className='text-center'>

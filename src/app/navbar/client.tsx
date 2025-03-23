@@ -1,15 +1,21 @@
 'use client'
 
 import { usePathname } from 'next/navigation'
-import NavBar from '../../components/Navbar'
+import NavBar, { Route } from '../../components/Navbar'
 
 export default function NavbarClient() {
   const pathName = usePathname()
-  const navRoutesExample = [
+  const navRoutesExample: Route[] = [
     {
-      path: '',
-      pathname: 'Hallo',
+      path: '/navbar',
+      pathname: 'Navbar',
+      pathType: ''
     },
+    {
+      path: '/sidebar',
+      pathname: 'Sidebar',
+      pathType: ''
+    }
   ]
 
   return (

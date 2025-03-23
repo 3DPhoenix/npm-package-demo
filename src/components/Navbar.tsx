@@ -39,7 +39,7 @@ export default function Navbar({
   navRoutes,
   subtitle,
   title,
-  pathName,
+  pathName
 }: Readonly<NavbarProps>) {
   return (
     <Background className={'NavBar pt-2 ' + className}>
@@ -77,7 +77,10 @@ export default function Navbar({
                       className={
                         ' inline self-center ' +
                         classNames({
-                          ' text-white ': pathName === route.path,
+                          ' text-white ':
+                            !!pathName &&
+                            !!route.path &&
+                            pathName.toLowerCase() === route.path.toLowerCase()
                         })
                       }
                     >

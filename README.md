@@ -1,22 +1,22 @@
-## Components Guide
+# Components Guide
 
-### Sidebar
+## Sidebar
 
 So Sidebar can look as desired the parent should have full height. </br>
 Here is an example for full height page content:
 
-```
-html,
-body {
-  display: flex;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+```bash
+  html,
+  body {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 
-  flex: 1;
-}
+    flex: 1;
+  }
 ```
 
 ## Building
@@ -24,4 +24,5 @@ body {
 ### First Help
 
 If the building ends with a `<div>` or similar HTML tag, the `tsconfig.json` probably automatically contains an incorrect change.</br>
-Fix to do: `"jsx": "preserve"` -> `"jsx": "react-jsx"`
+Fix to do: `"jsx": "preserve"` -> `"jsx": "react-jsx"`</br>
+Now, this Bug is prevented by overwritting the typescript jsx prop in the rollup.config

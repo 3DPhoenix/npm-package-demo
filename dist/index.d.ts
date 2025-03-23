@@ -1,4 +1,4 @@
-import * as react_jsx_runtime from 'react/jsx-runtime';
+import * as react from 'react';
 import { PropsWithChildren, HTMLAttributes, ReactNode, MouseEventHandler } from 'react';
 
 type Route<TPathType = string> = {
@@ -22,9 +22,9 @@ interface NavbarProps {
 /**
  * Navbar
  */
-declare function Navbar({ className, iconUrl, navRoutes, subtitle, title, pathName, }: Readonly<NavbarProps>): react_jsx_runtime.JSX.Element;
+declare function Navbar({ className, iconUrl, navRoutes, subtitle, title, pathName }: Readonly<NavbarProps>): react.JSX.Element;
 
-declare function NavigationElement({ children, }: Readonly<PropsWithChildren>): react_jsx_runtime.JSX.Element;
+declare function NavigationElement({ children }: Readonly<PropsWithChildren>): react.JSX.Element;
 
 interface SidebarProps extends HTMLAttributes<HTMLDivElement>, PropsWithChildren {
     list?: Array<ReactNode>;
@@ -33,6 +33,6 @@ interface SidebarProps extends HTMLAttributes<HTMLDivElement>, PropsWithChildren
     version?: string;
     onClose?: MouseEventHandler<HTMLButtonElement>;
 }
-declare function Sidebar({ children, className, list, onClose, open, title, version, ...rest }: Readonly<SidebarProps>): react_jsx_runtime.JSX.Element;
+declare function Sidebar({ children, className, list, onClose, open, title, version, ...rest }: Readonly<SidebarProps>): react.JSX.Element;
 
 export { Navbar, NavigationElement, Sidebar };

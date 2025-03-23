@@ -4,7 +4,7 @@ import {
   HTMLAttributes,
   MouseEventHandler,
   PropsWithChildren,
-  ReactNode,
+  ReactNode
 } from 'react'
 
 export interface SidebarProps
