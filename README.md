@@ -18,3 +18,10 @@ body {
   flex: 1;
 }
 ```
+
+## Building
+
+### First Help
+
+If the building ends with a `<div>` or similar HTML tag, the `tsconfig.json` probably automatically contains an incorrect change.</br>
+Fix to do: `"jsx": "preserve"` -> `"jsx": "react-jsx"`

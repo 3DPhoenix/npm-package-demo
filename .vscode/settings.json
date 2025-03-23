@@ -1,17 +1,23 @@
 {
   "editor.autoIndent": "none",
   "editor.codeActionsOnSave": {
-    "source.fixAll.ts": "always",
-    "source.organizeImports": "always"
+    "source.addMissingImports": "explicit",
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.stylelint": "explicit",
+    "source.fixAll.ts": "explicit",
+    "source.organizeImports": "explicit"
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnType": false,
   "editor.formatOnSave": true,
   "editor.insertSpaces": true,
+  "eslint.format.enable": true,
   "editor.tabSize": 2,
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[css]": {
+  "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
+

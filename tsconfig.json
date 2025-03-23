@@ -117,3 +117,4 @@
   "include": ["src", ".next/types/**/*.ts"],
   "exclude": ["*/**/*.test.{ts,tsx}"]
 }
+
